@@ -288,7 +288,7 @@ def build_pkinit_as_req(
     kdc_req_body_data['till']  = (now + datetime.timedelta(days=1)).replace(microsecond=0)
     kdc_req_body_data['rtime'] = (now + datetime.timedelta(days=1)).replace(microsecond=0)
     kdc_req_body_data['nonce'] = getrandbits(31)
-    kdc_req_body_data['etype'] = [18,17]
+    kdc_req_body_data['etype'] = [18,17,20,19,16,23,25,26]
 
     kdc_req_body = KDC_REQ_BODY(kdc_req_body_data)
 
