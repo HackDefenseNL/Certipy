@@ -4,6 +4,9 @@
 
 Certipy is an offensive tool for enumerating and abusing Active Directory Certificate Services (AD CS). If you're not familiar with AD CS and the various domain escalation techniques, I highly recommend reading [Certified Pre-Owned](https://posts.specterops.io/certified-pre-owned-d95910965cd2) by [Will Schroeder](https://twitter.com/harmj0y) and [Lee Christensen](https://twitter.com/tifkin_).
 
+## MDI Evasion 
+This verison of Certipy contains a diffrent e-type list, based on the kinit etype list. This prevents the MDI message: "SUSPICIOUS CERTIFICATE USAGE OVER KERBEROS PROTOCOL".
+
 ## Table of Contents
 
 - [Certipy](#certipy)
@@ -814,8 +817,7 @@ Certipy v4.7.0 - by Oliver Lyak (ly4k)
 [*] Saved certificate and private key to 'administrator.pfx'
 [*] Exiting...
 ```
-### MDI Evasion 
-This verison of Certipy contains a diffrent e-type list, based on the kinit etype list. This prevents the MDI message: "SUSPICIOUS CERTIFICATE USAGE OVER KERBEROS PROTOCOL".
+
 
 ## Contact
 
