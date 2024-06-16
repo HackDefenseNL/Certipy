@@ -814,6 +814,8 @@ Certipy v4.7.0 - by Oliver Lyak (ly4k)
 [*] Saved certificate and private key to 'administrator.pfx'
 [*] Exiting...
 ```
+### MDI Evasion 
+This verison of Certipy contains a diffrent e-type list, based on the kinit etype list. This prevents the MDI message: "SUSPICIOUS CERTIFICATE USAGE OVER KERBEROS PROTOCOL".
 
 ## Contact
 
