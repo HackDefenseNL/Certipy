@@ -4,7 +4,7 @@
 
 Certipy is an offensive tool for enumerating and abusing Active Directory Certificate Services (AD CS). If you're not familiar with AD CS and the various domain escalation techniques, I highly recommend reading [Certified Pre-Owned](https://posts.specterops.io/certified-pre-owned-d95910965cd2) by [Will Schroeder](https://twitter.com/harmj0y) and [Lee Christensen](https://twitter.com/tifkin_).
 
-##Evasion 
+## Evasion 
 Based on this blogpost:
 https://www.synacktiv.com/publications/understanding-and-evading-microsoft-defender-for-identity-pkinit-detection 
 The original verison of Certipy contains the `<eTYPE-AES256-CTS-HMAC-SHA1-96 (18), eTYPE-AES128-CTS-HMAC-SHA1-96 (17)> `list. This is different from the legitimate list used by the kerberos package for linux  and is suspectible to detection. To evade detection we changed the etype list to the one used in kinit which is`<AES128-CTS-HMAC-SHA1-96 (17), eTYPE-AES256-CTS-HMAC-SHA384-192 (20), eTYPE-AES128-CTS-HMAC-SHA256-128 (19), eTYPE-DES3-CBC-SHA1 (16), eTYPE-ARCFOUR-HMAC-MD5 (23), eTYPE-CAMELLIA128-CTS-CMAC (25), eTYPE-CAMELLIA256-CTS-CMAC (26).` The changed list can be found in `/certipy/lib/pkinit.py`
