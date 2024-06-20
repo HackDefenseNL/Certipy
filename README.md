@@ -8,7 +8,7 @@ Certipy is an offensive tool for enumerating and abusing Active Directory Certif
 Based on this blogpost:
 https://www.synacktiv.com/publications/understanding-and-evading-microsoft-defender-for-identity-pkinit-detection 
 The original verison of Certipy contains the `<eTYPE-AES256-CTS-HMAC-SHA1-96 (18), eTYPE-AES128-CTS-HMAC-SHA1-96 (17)> `list. This is different from the legitimate list used by the kerberos package for linux  and is suspectible to detection. To evade detection we changed the etype list to the one used in kinit which is`<AES128-CTS-HMAC-SHA1-96 (17), eTYPE-AES256-CTS-HMAC-SHA384-192 (20), eTYPE-AES128-CTS-HMAC-SHA256-128 (19), eTYPE-DES3-CBC-SHA1 (16), eTYPE-ARCFOUR-HMAC-MD5 (23), eTYPE-CAMELLIA128-CTS-CMAC (25), eTYPE-CAMELLIA256-CTS-CMAC (26).` The changed list can be found in `/certipy/lib/pkinit.py`
-This prevents the MDI message: `SUSPICIOUS CERTIFICATE USAGE OVER KERBEROS PROTOCOL`.
+This prevents the Microsoft Defender for Identity message: `SUSPICIOUS CERTIFICATE USAGE OVER KERBEROS PROTOCOL`.
 
 ## Table of Contents
 
